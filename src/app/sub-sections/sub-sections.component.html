@@ -2,7 +2,11 @@
 <div ngbAccordion #accordion="ngbAccordion">
     <div ngbAccordionItem="sec_{{i}}" *ngFor="let section of sections; let i = index">
         <h2 ngbAccordionHeader>
+            @if (section.link != 'none'){
+            <button class="btn btn-ligth w-100 btn-link" routerLink="/{{section.link}}">{{section.title}}</button>
+            } @else {
             <button ngbAccordionButton>{{section.title}}</button>
+            }
         </h2>
         <div ngbAccordionCollapse>
             <div ngbAccordionBody>
@@ -11,7 +15,7 @@
                         {{section.content}}
                     </p>
                     @if (section.subSections.length > 0){
-                        <app-sub-sections [sections]="section.subSections"></app-sub-sections>
+                    <app-sub-sections [sections]="section.subSections"></app-sub-sections>
                     }
                 </ng-template>
             </div>

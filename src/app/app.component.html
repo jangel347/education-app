@@ -1,5 +1,5 @@
 <div class="wrapper d-flex">
-  <aside class="float-left d-block">
+  <aside class="float-left d-block shadow-sm">
     <div ngbAccordion #accordion="ngbAccordion">
       <div ngbAccordionItem="sec_{{i}}" *ngFor="let section of sections; let i = index">
         <h2 ngbAccordionHeader>
@@ -19,6 +19,6 @@
     </div>
   </aside>
   <main class="float-left d-block">
-    MAIN
+    <router-outlet></router-outlet>
   </main>
 </div>

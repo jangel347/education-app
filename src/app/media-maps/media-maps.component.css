@@ -1,0 +1,5 @@
+.container{flex-direction:column;align-items:center}
+.subcontainer{align-items:flex-start}
+.item{align-items:center;flex-direction:column}
+.txt-strong{font-weight:700}
+.txt-medium{font-weight:500}

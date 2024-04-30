@@ -1,0 +1,4 @@
+.wrapper{width:100%}
+.wrapper aside{width:30%;height:100vh}
+.wrapper main{width:70%;height:100vh}
+.featured-news{display:grid;grid-template-columns:2fr 1fr;grid-gap:16px}

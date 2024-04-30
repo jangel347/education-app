@@ -1,0 +1,22 @@
+@if (sections.length > 0) {
+<div ngbAccordion #accordion="ngbAccordion">
+    <div ngbAccordionItem="sec_{{i}}" *ngFor="let section of sections; let i = index">
+        <h2 ngbAccordionHeader>
+            <button ngbAccordionButton>{{section.title}}</button>
+        </h2>
+        <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+                <ng-template>
+                    <p>
+                        {{section.content}}
+                    </p>
+                    @if (section.subSections.length > 0){
+                        <app-sub-sections [sections]="section.subSections"></app-sub-sections>
+                    }
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+}
